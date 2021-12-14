@@ -45,9 +45,8 @@ def create_new_tg_app(
         "app_platform": random.choice(app_platform),
         "app_desc": app_desc
     }
-    response_c = requests.post(
+    return requests.post(
         request_url,
         data=request_data,
         headers=custom_header
     )
-    return response_c
